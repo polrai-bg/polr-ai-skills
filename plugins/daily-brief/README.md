@@ -3,7 +3,7 @@
 A one-screen morning brief for a solo operator or small-team owner. It blends
 **repo-based context** (your plan, contracts, family, home) with **live data**
 from the MCP servers you connect (CRM, email, calendar, accounting), and returns
-a tight, scannable operating plan for the day — work and personal in one place.
+a tight, scannable operating plan for the day: work and personal in one place.
 
 It is manually invoked, opinionated about output (no fluff, one screen), and
 ships with a worked example plus a setup guide. It contains **no real data**.
@@ -21,7 +21,7 @@ ships with a worked example plus a setup guide. It contains **no real data**.
 /daily-brief:daily-brief        # or just say "daily brief"
 ```
 
-- **Weekday**: full operating brief — anchor, Critical Number, Top 3, calendar,
+- **Weekday**: full operating brief: anchor, Critical Number, Top 3, calendar,
   time block, client/lead pulse, finance, home & family, week pulse.
 - **Weekend**: lighter, family-first variant.
 - **Sections on demand**: "run a client pulse", "run a lead pulse", "midday

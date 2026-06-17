@@ -1,4 +1,4 @@
-# Weekly Tracker (EXAMPLE — fictional data)
+# Weekly Tracker (EXAMPLE: fictional data)
 
 > Copy this to `business/weekly-tracker.md` in your private data repo and edit.
 > The daily-brief skill reads the Critical Number and counters, increments

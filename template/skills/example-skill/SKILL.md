@@ -8,7 +8,7 @@ name: example-skill
 description: A starter skill that explains the SKILL.md format. Replace this. Triggers on "run the example skill" or "show me the skill template". Says what it does and names its trigger phrases, the way every good description should.
 
 # ── Optional ────────────────────────────────────────────────────────────────
-# Uncomment any you need. Delete the ones you don't — Claude Code ignores
+# Uncomment any you need. Delete the ones you don't. Claude Code ignores
 # unknown keys, but a clean frontmatter is easier to maintain.
 #
 # `disable-model-invocation: true`
@@ -37,7 +37,7 @@ sharp new teammate: concrete, ordered, and unambiguous.
 ## How a skill is invoked
 
 - **Automatically**, when the user's request matches your `description`.
-- **Manually**, by typing `/<plugin-name>:<skill-name>` — for this template
+- **Manually**, by typing `/<plugin-name>:<skill-name>`. For this template
   that would be `/example-skill:example-skill` once installed.
 
 Plugin skills are always namespaced by the plugin name, so pick names that read
@@ -47,15 +47,15 @@ well together.
 
 Use plain Markdown headings. A reliable shape:
 
-1. **Trigger phrases** — restate the exact phrases that should fire the skill,
+1. **Trigger phrases**: restate the exact phrases that should fire the skill,
    so behavior is predictable.
-2. **Workflow** — numbered steps. Tell Claude what to read, what to compute, and
+2. **Workflow**: numbered steps. Tell Claude what to read, what to compute, and
    in what order. Be explicit about parallel vs. sequential work.
-3. **Output format** — show the exact shape of the result. If it is long, put it
+3. **Output format**: show the exact shape of the result. If it is long, put it
    in a `references/` file (see below) and point to it.
-4. **Rules / guardrails** — what to never do, what to confirm before doing, how
+4. **Rules / guardrails**: what to never do, what to confirm before doing, how
    to handle missing data.
-5. **Examples** — a few `"user says X"` → `"skill does Y"` lines remove
+5. **Examples**: a few `"user says X"` to `"skill does Y"` lines remove
    ambiguity faster than paragraphs of prose.
 
 ## Bundling supporting files
@@ -64,7 +64,7 @@ A skill is a folder, not just one file. You can ship:
 
 ```
 example-skill/
-├── SKILL.md            # this file — the entry point
+├── SKILL.md            # this file, the entry point
 ├── references/         # longer docs the skill reads at runtime
 │   └── output-format.md
 └── scripts/            # helper scripts the skill can run

@@ -2,7 +2,7 @@
 
 A public, MIT-licensed store of [Claude Code](https://claude.com/claude-code)
 skills from POLR AI. This repo is a **Claude Code plugin marketplace**: add it
-once, then install any skill with a single command. It is also a **template** —
+once, then install any skill with a single command. It is also a **template**:
 fork it, drop in your own skills, and you have your own marketplace that you and
 your team (or anyone you share the link with) can install from.
 

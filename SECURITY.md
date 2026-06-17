@@ -19,7 +19,7 @@ content (including from history where warranted) as quickly as possible.
 These skills run inside Claude Code on a user's machine and act through the
 user's own connected tools and MCP servers. They ship no secrets and request no
 credentials. The most likely "vulnerability" in a skills repo is **accidentally
-committed private data** — that is explicitly in scope and we want to hear about
+committed private data**. That is explicitly in scope and we want to hear about
 it.
 
 ## For users

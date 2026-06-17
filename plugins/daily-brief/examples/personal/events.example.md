@@ -1,4 +1,4 @@
-# Personal events & important dates (EXAMPLE — fictional data)
+# Personal events & important dates (EXAMPLE: fictional data)
 
 > Copy this to `personal/family/events.md` (and/or `important-dates.md`) in your
 > private data repo and edit. The daily-brief skill reads these for the 30-day
@@ -28,5 +28,5 @@
 
 ## Notes
 
-- Single dash "—" in the brief means nothing is time-sensitive within 30 days.
+- "none" in the brief means nothing is time-sensitive within 30 days.
 - Keep this private. Do not commit real family data to a public repo.

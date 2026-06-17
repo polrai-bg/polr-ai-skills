@@ -29,7 +29,7 @@ jobs:
       - name: Fail if real-data paths were committed
         run: |
           set -e
-          # These paths should never exist in the public repo — they hold a
+          # These paths should never exist in the public repo. They hold a
           # user's private context and are .gitignored. Example data lives only
           # under plugins/*/examples/.
           bad=0

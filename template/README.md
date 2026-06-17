@@ -1,4 +1,4 @@
-# template — copy-me starter plugin
+# template: copy-me starter plugin
 
 This folder is a minimal, working plugin you copy to start a new skill. It is
 **not** listed in `.claude-plugin/marketplace.json`, so it never shows up as an
@@ -18,11 +18,11 @@ mv plugins/my-skill/skills/example-skill plugins/my-skill/skills/my-skill
 
 Then edit:
 
-1. `plugins/my-skill/.claude-plugin/plugin.json` — set `name`, `description`,
+1. `plugins/my-skill/.claude-plugin/plugin.json`: set `name`, `description`,
    `keywords`, `homepage`.
-2. `plugins/my-skill/skills/my-skill/SKILL.md` — set the frontmatter `name` to
+2. `plugins/my-skill/skills/my-skill/SKILL.md`: set the frontmatter `name` to
    `my-skill`, write a specific `description`, and replace the body.
-3. `.claude-plugin/marketplace.json` (repo root) — add an entry:
+3. `.claude-plugin/marketplace.json` (repo root): add an entry:
 
    ```json
    {

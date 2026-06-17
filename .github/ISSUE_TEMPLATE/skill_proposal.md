@@ -15,7 +15,7 @@ One or two sentences.
 The phrases a user would say to invoke it.
 
 **Data it needs (if any)**
-What files or MCP servers it reads. Confirm it ships no real data — only
+What files or MCP servers it reads. Confirm it ships no real data, only
 fictional `examples/`.
 
 **Why it belongs here**

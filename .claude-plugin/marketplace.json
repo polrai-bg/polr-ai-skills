@@ -18,6 +18,14 @@
       "category": "productivity",
       "keywords": ["daily-brief", "standup", "productivity", "mcp", "morning-routine"],
       "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/daily-brief"
+    },
+    {
+      "name": "agentic-os",
+      "source": "./agentic-os",
+      "description": "Turn an empty folder into a complete Agentic OS through a staged interview, then grow it one role at a time. Ships two skills: bootstrap-company and add-new-agent.",
+      "category": "productivity",
+      "keywords": ["agentic-os", "multi-agent", "scaffolding", "company", "bootstrap"],
+      "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/agentic-os"
     }
   ]
 }

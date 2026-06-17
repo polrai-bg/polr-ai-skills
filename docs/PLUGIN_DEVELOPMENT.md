@@ -56,9 +56,9 @@ commit. Bump behavior is controlled at the marketplace level instead.
    cp -R template plugins/my-skill
    mv plugins/my-skill/skills/example-skill plugins/my-skill/skills/my-skill
    ```
-2. **Edit `plugins/my-skill/.claude-plugin/plugin.json`** — set `name`,
+2. **Edit `plugins/my-skill/.claude-plugin/plugin.json`**: set `name`,
    `description`, `keywords`, `homepage`.
-3. **Write `plugins/my-skill/skills/my-skill/SKILL.md`** — set frontmatter
+3. **Write `plugins/my-skill/skills/my-skill/SKILL.md`**: set frontmatter
    `name: my-skill`, a specific `description`, and the body.
 4. **Register it** in `.claude-plugin/marketplace.json`:
    ```json

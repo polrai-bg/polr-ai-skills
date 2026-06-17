@@ -1,0 +1,12 @@
+{
+  "name": "agentic-os",
+  "description": "Turn an empty folder into a complete Agentic OS through a staged interview, then grow it one role at a time. Two skills: bootstrap-company (full company setup) and add-new-agent (add a specialist).",
+  "category": "productivity",
+  "author": {
+    "name": "POLR AI",
+    "url": "https://github.com/polrai-bg/polr-ai-skills"
+  },
+  "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/agentic-os",
+  "license": "MIT",
+  "keywords": ["agentic-os", "multi-agent", "scaffolding", "company", "interview", "bootstrap"]
+}

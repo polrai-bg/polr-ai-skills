@@ -17,7 +17,7 @@ function readJSON(path) {
   try {
     return JSON.parse(readFileSync(path, "utf8"));
   } catch (e) {
-    fail(`Invalid JSON: ${path} — ${e.message}`);
+    fail(`Invalid JSON: ${path}: ${e.message}`);
     return null;
   }
 }
@@ -117,4 +117,4 @@ if (errors.length) {
   console.error(`\nFAILED with ${errors.length} error(s).`);
   process.exit(1);
 }
-console.log(`OK — ${registered.size} plugin(s) validated, ${warnings.length} warning(s).`);
+console.log(`OK: ${registered.size} plugin(s) validated, ${warnings.length} warning(s).`);

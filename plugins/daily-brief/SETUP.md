@@ -1,4 +1,4 @@
-# daily-brief — setup
+# daily-brief setup
 
 The skill ships with **no data**. You provide two things: a small set of context
 files in your own repo, and connections to the MCP servers you want it to pull
@@ -15,7 +15,7 @@ Invoke it with `/daily-brief:daily-brief` (or just say "daily brief").
 
 ## 2. Create your context files
 
-The skill reads static context from a data repo you control — usually the repo
+The skill reads static context from a data repo you control, usually the repo
 you run Claude Code in. Copy the fictional starters from this plugin's
 `examples/` folder and edit them with your real (private) information:
 
@@ -33,18 +33,18 @@ your-data-repo/
 
 The full layout and the "contract" for each file is documented in
 [`skills/daily-brief/references/context-structure.md`](skills/daily-brief/references/context-structure.md).
-You don't need every file — start with `tasks.md`, `weekly-tracker.md`, and
+You don't need every file. Start with `tasks.md`, `weekly-tracker.md`, and
 `contracts.md`, then add personal files as you want them.
 
 > **Keep this data private.** It is yours and should live in a private repo. If
 > you forked `polr-ai-skills`, do **not** commit your real `business/` or
-> `personal/` files into the public fork — the repo's `.gitignore` blocks those
+> `personal/` files into the public fork. The repo's `.gitignore` blocks those
 > paths as a backstop, but the safe move is a separate private data repo.
 
 ## 3. Connect the MCP servers you want
 
 The skill pulls live data from whatever you have connected. It works with any
-subset — connect only what you use. Common choices:
+subset. Connect only what you use. Common choices:
 
 | Category | Examples | Used for |
 |---|---|---|

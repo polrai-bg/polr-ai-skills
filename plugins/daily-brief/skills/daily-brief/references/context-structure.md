@@ -1,6 +1,6 @@
 # Data repo structure
 
-The daily-brief skill reads your context from a **data repo you control** —
+The daily-brief skill reads your context from a **data repo you control**,
 typically the repo you run Claude Code in, or one you point it at. Nothing here
 ships with the plugin; you create these files. Copy the fictional starters in
 this plugin's `examples/` folder and edit them.
@@ -36,7 +36,7 @@ things existing in some form:
 1. **A task list** it can read first and check items off of.
 2. **A weekly tracker** with countable cadence targets.
 3. **A contracts ledger** with per-engagement silence thresholds and deliverable
-   checklists — this drives the CLIENT PULSE section.
+   checklists. This drives the CLIENT PULSE section.
 
 ## Key file contracts
 

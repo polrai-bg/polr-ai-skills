@@ -1,4 +1,4 @@
-# Contracts ledger (EXAMPLE — fictional data)
+# Contracts ledger (EXAMPLE: fictional data)
 
 > Copy this to `business/contracts.md` in your private data repo and replace
 > everything with your real engagements. This is the source of truth for
@@ -7,7 +7,7 @@
 
 ## Active Retainers
 
-### Acme Co. — Monthly Coaching Retainer
+### Acme Co. - Monthly Coaching Retainer
 - Started: 2026-03-01
 - Amount: $3,000 / mo
 - Primary contact: Dana Whitfield (dana@example.com)
@@ -20,7 +20,7 @@
 
 ## Active Delivery
 
-### Delphi Group — AI Readiness Assessment (fixed scope)
+### Delphi Group - AI Readiness Assessment (fixed scope)
 - Started: 2026-04-15
 - Amount: $8,000 fixed
 - Primary contact: Lee Carbone (lee@example.com)
@@ -32,7 +32,7 @@
 
 ## Sent / Awaiting Signature
 
-### Borealis Labs — Strategic Retainer proposal
+### Borealis Labs - Strategic Retainer proposal
 - Sent: 2026-05-02
 - Amount: $4,500 / mo
 - Primary contact: Morgan Vale (morgan@example.com)
