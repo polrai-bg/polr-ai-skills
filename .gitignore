@@ -1,0 +1,51 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PRIVACY GUARD — keep real personal/business data out of a public fork.
+#
+# Skills like daily-brief read context from files YOU create (business/,
+# personal/, journal/, tasks.md, calendar.json). Those belong in YOUR private
+# data repo, never in this public marketplace. The ONLY data this repo commits
+# is the fictional placeholders under plugins/*/examples/, which are
+# force-included below.
+# ─────────────────────────────────────────────────────────────────────────
+/business/
+/personal/
+/journal/
+/tasks.md
+/calendar.json
+*.local.md
+*.private.md
+
+# But always keep the shipped example data:
+!plugins/**/examples/**
+
+# Secrets / credentials
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache / temp
+.cache/
+tmp/
+temp/

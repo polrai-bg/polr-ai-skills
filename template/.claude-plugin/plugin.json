@@ -1,0 +1,11 @@
+{
+  "name": "example-skill",
+  "description": "Starter plugin. Copy this whole folder into ../plugins, rename it, and edit the SKILL.md to build your own skill. This template is intentionally NOT listed in marketplace.json.",
+  "author": {
+    "name": "POLR AI",
+    "url": "https://github.com/polrai-bg/polr-ai-skills"
+  },
+  "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/template",
+  "license": "MIT",
+  "keywords": ["template", "example", "starter"]
+}

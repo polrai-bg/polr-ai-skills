@@ -1,0 +1,12 @@
+{
+  "name": "daily-brief",
+  "description": "Generate a tight one-screen daily brief that blends repo-based context (plan, contracts, family, home) with live data from your connected MCP servers (CRM, email, calendar, accounting). Manually invoked.",
+  "category": "productivity",
+  "author": {
+    "name": "POLR AI",
+    "url": "https://github.com/polrai-bg/polr-ai-skills"
+  },
+  "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/daily-brief",
+  "license": "MIT",
+  "keywords": ["daily-brief", "standup", "productivity", "mcp", "morning-routine"]
+}

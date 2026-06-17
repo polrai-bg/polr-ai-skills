@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or private-data report
+    url: https://github.com/polrai-bg/polr-ai-skills/security/advisories/new
+    about: Report a vulnerability or accidentally committed private data privately. Do not open a public issue.

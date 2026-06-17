@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "polr-ai-skills",
+  "version": "0.1.0",
+  "description": "A public, MIT-licensed store of Claude Code skills from POLR AI. Install a skill with one command, or fork the whole repo and run your own marketplace.",
+  "owner": {
+    "name": "POLR AI",
+    "url": "https://github.com/polrai-bg/polr-ai-skills"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "daily-brief",
+      "source": "./daily-brief",
+      "description": "Generate a tight one-screen daily brief that blends repo-based context (business plan, contracts, family, home) with live data from your connected MCP servers (CRM, email, calendar, accounting). Manually invoked; ships with a worked example and setup guide.",
+      "category": "productivity",
+      "keywords": ["daily-brief", "standup", "productivity", "mcp", "morning-routine"],
+      "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/daily-brief"
+    }
+  ]
+}
