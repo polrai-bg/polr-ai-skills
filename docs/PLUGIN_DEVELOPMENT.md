@@ -44,10 +44,14 @@ commit. Bump behavior is controlled at the marketplace level instead.
 
 | Field | Required | Notes |
 |---|---|---|
-| `description` | yes | Drives auto-invocation. Be specific; name trigger phrases. Keep under ~200 chars of signal. |
-| `name` | no | Defaults to the folder name. Use kebab-case. |
+| `description` | yes | Drives auto-invocation. Be specific; name trigger phrases. Third person. Max **1024 chars** (enforced). |
+| `name` | no | Defaults to the folder name. **Lowercase letters, numbers, and hyphens only**, ≤64 chars, no reserved words (`anthropic`, `claude`), and **must match the skill's directory** (all enforced). |
 | `disable-model-invocation` | no | `true` makes the skill `/slash`-only (never auto-invoked). |
 | `allowed-tools` | no | Whitelist of tools the skill may use while active. |
+
+Keep the `SKILL.md` **body under 500 lines** (the validator warns past this);
+move long reference material into `references/` and link to it. The rules above
+are checked by `node scripts/validate-manifests.mjs` and in CI.
 
 ## Step-by-step: add a skill
 
