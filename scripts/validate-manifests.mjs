@@ -22,25 +22,72 @@ function readJSON(path) {
   }
 }
 
-// Returns the YAML frontmatter description, or null if missing/empty.
-function skillDescription(skillMd) {
+// Parse a SKILL.md into { name, description, bodyLines } (any field may be null).
+// Mirrors the official frontmatter rules so the validator catches violations
+// before a skill ships. See:
+//   https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
+function parseSkill(skillMd) {
   const text = readFileSync(skillMd, "utf8");
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!m) return null;
-  const dm = m[1].match(/^description:[ \t]*(.+)$/m);
-  if (!dm) return null;
-  return dm[1].trim().replace(/^["']|["']$/g, "");
+  if (!m) return { name: null, description: null, bodyLines: 0 };
+  const front = m[1];
+  const field = (key) => {
+    const fm = front.match(new RegExp(`^${key}:[ \\t]*(.+)$`, "m"));
+    return fm ? fm[1].trim().replace(/^["']|["']$/g, "") : null;
+  };
+  const body = text.slice(m[0].length);
+  const bodyLines = body.replace(/^\r?\n/, "").split(/\r?\n/).length;
+  return { name: field("name"), description: field("description"), bodyLines };
+}
+
+// Official frontmatter limits (best-practices doc).
+const NAME_MAX = 64;
+const DESC_MAX = 1024;
+const BODY_MAX_LINES = 500;
+const RESERVED_WORDS = ["anthropic", "claude"];
+
+// Validate a skill's frontmatter against the official rules. `expectedName` is
+// the directory name the skill lives in (skills/<dir>/SKILL.md), or null for a
+// plugin-root SKILL.md where the name maps differently.
+function checkSkill(skillMd, label, expectedName) {
+  const { name, description, bodyLines } = parseSkill(skillMd);
+
+  if (!description) {
+    fail(`${label}: ${skillMd} has no frontmatter "description"`);
+  } else {
+    if (description.length < 20) warn(`${label}: ${skillMd} description looks thin (<20 chars)`);
+    if (description.length > DESC_MAX)
+      fail(`${label}: ${skillMd} description is ${description.length} chars (max ${DESC_MAX})`);
+  }
+
+  if (name !== null) {
+    if (name.length > NAME_MAX)
+      fail(`${label}: ${skillMd} name "${name}" is ${name.length} chars (max ${NAME_MAX})`);
+    if (!/^[a-z0-9-]+$/.test(name))
+      fail(`${label}: ${skillMd} name "${name}" must be lowercase letters, numbers, and hyphens only`);
+    for (const word of RESERVED_WORDS)
+      if (name.toLowerCase().includes(word))
+        fail(`${label}: ${skillMd} name "${name}" contains reserved word "${word}"`);
+    if (expectedName && name !== expectedName)
+      fail(`${label}: ${skillMd} name "${name}" does not match its directory "${expectedName}"`);
+  }
+
+  if (bodyLines > BODY_MAX_LINES)
+    warn(`${label}: ${skillMd} body is ${bodyLines} lines (keep under ${BODY_MAX_LINES})`);
 }
 
 // Find every SKILL.md inside a plugin (skills/*/SKILL.md or a root SKILL.md).
+// Each entry carries the directory name the skill's `name` is expected to match
+// (null for a plugin-root SKILL.md, where the name maps to the plugin instead).
 function findSkills(pluginDir) {
   const found = [];
-  if (existsSync(join(pluginDir, "SKILL.md"))) found.push(join(pluginDir, "SKILL.md"));
+  if (existsSync(join(pluginDir, "SKILL.md")))
+    found.push({ path: join(pluginDir, "SKILL.md"), expectedName: null });
   const skillsDir = join(pluginDir, "skills");
   if (existsSync(skillsDir)) {
     for (const entry of readdirSync(skillsDir)) {
       const sk = join(skillsDir, entry, "SKILL.md");
-      if (existsSync(sk)) found.push(sk);
+      if (existsSync(sk)) found.push({ path: sk, expectedName: entry });
     }
   }
   return found;
@@ -65,9 +112,7 @@ function checkPlugin(pluginDir, label) {
     fail(`${label}: no SKILL.md found`);
   }
   for (const sk of skills) {
-    const desc = skillDescription(sk);
-    if (!desc) fail(`${label}: ${sk} has no frontmatter "description"`);
-    else if (desc.length < 20) warn(`${label}: ${sk} description looks thin (<20 chars)`);
+    checkSkill(sk.path, label, sk.expectedName);
   }
 }
 

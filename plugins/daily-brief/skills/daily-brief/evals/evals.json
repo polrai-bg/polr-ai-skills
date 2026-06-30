@@ -1,0 +1,62 @@
+{
+  "$comment": "Eval scaffold for the daily-brief skill. Format follows the skill-creator eval spec (https://agentskills.io/skill-creation/evaluating-skills). 'trigger' cases check that the skill activates (or not) on a prompt; 'behavior' cases check the output once it runs. daily-brief reads a user data repo and live MCP data, so behavior cases need a fixture repo + connected (or mocked) MCP servers before they can run end-to-end. Replace the placeholders below with real fixtures.",
+  "skills": ["daily-brief"],
+  "cases": [
+    {
+      "name": "trigger-morning-brief",
+      "type": "trigger",
+      "query": "give me my morning brief",
+      "should_trigger": true
+    },
+    {
+      "name": "trigger-whats-on-my-plate",
+      "type": "trigger",
+      "query": "what's on my plate today?",
+      "should_trigger": true
+    },
+    {
+      "name": "trigger-client-pulse",
+      "type": "trigger",
+      "query": "run a client pulse",
+      "should_trigger": true
+    },
+    {
+      "name": "no-trigger-unrelated",
+      "type": "trigger",
+      "query": "explain how OAuth refresh tokens work",
+      "should_trigger": false
+    },
+    {
+      "name": "weekday-brief-structure",
+      "type": "behavior",
+      "query": "daily brief",
+      "fixtures": {
+        "data_repo": "TODO: path to a fixture repo with business/, personal/, tasks.md",
+        "today": "a weekday",
+        "mcp": "TODO: connected or mocked CRM / email / calendar / accounting servers"
+      },
+      "expected_behavior": [
+        "Reads tasks.md, business/weekly-tracker.md, and business/contracts.md before producing output (does not answer from memory)",
+        "Produces the brief exactly once, in the final message, with no draft or partial render beforehand",
+        "Leads with business priorities and includes a Top 3 work actions section",
+        "Output fits on roughly one screen (~50-60 lines)",
+        "If a connector is unavailable, notes the gap instead of silently omitting the section"
+      ]
+    },
+    {
+      "name": "weekend-brief-structure",
+      "type": "behavior",
+      "query": "daily brief",
+      "fixtures": {
+        "data_repo": "TODO: same fixture repo",
+        "today": "a Saturday or Sunday",
+        "mcp": "TODO: calendar at minimum"
+      },
+      "expected_behavior": [
+        "Uses the weekend variant: leads with HOME & FAMILY, drops the Critical Number and Top 3 work actions",
+        "Tighter output (~20 lines), family-first",
+        "Does not pull CRM or accounting unless explicitly asked"
+      ]
+    }
+  ]
+}
