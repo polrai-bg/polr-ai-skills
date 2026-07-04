@@ -33,6 +33,7 @@ Update later with `/plugin marketplace update polr-ai-skills`, and remove with
 |---|---|
 | [`daily-brief`](plugins/daily-brief/) | One-screen morning brief blending repo context with live CRM / email / calendar / accounting data pulled from your connected MCP servers. Ships with a worked example and a `SETUP.md`. |
 | [`agentic-os`](plugins/agentic-os/) | Turn an empty folder into a complete Agentic OS through a staged interview, then grow it one role at a time. Ships two skills: `bootstrap-company` and `add-new-agent`. |
+| [`x-twitter-scraper`](plugins/x-twitter-scraper/) | Plan Xquik X/Twitter data workflows for REST API setup, MCP setup, SDKs, webhooks, exports, monitors, and confirmation-gated actions. |
 
 More skills land over time. Watch or star the repo to follow along.
 
