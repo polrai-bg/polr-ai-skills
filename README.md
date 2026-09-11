@@ -33,6 +33,7 @@ Update later with `/plugin marketplace update polr-ai-skills`, and remove with
 |---|---|
 | [`daily-brief`](plugins/daily-brief/) | One-screen morning brief blending repo context with live CRM / email / calendar / accounting data pulled from your connected MCP servers. Ships with a worked example and a `SETUP.md`. |
 | [`agentic-os`](plugins/agentic-os/) | Turn an empty folder into a complete Agentic OS through a staged interview, then grow it one role at a time. Ships two skills: `bootstrap-company` and `add-new-agent`. |
+| [`architect-to-implementer`](plugins/architect-to-implementer/) | Turns a finished planning session into an implementation contract another coding agent (Claude Code, Codex, Cursor) can execute without the conversation: approved decisions, scope, acceptance criteria, verification, escalation rules, a validator, a docs commit-and-push, and a paste-ready kickoff prompt. |
 
 More skills land over time. Watch or star the repo to follow along.
 

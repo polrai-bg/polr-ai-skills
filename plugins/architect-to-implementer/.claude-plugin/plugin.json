@@ -1,0 +1,12 @@
+{
+  "name": "architect-to-implementer",
+  "description": "Turn approved architecture and planning into a self-contained implementation contract for a separate coding agent that cannot see the planning conversation. Repository-grounded scope, decision boundaries, acceptance criteria, verification, escalation, a validator script, a docs commit-and-push, and a paste-ready kickoff prompt.",
+  "category": "development",
+  "author": {
+    "name": "POLR AI",
+    "url": "https://github.com/polrai-bg/polr-ai-skills"
+  },
+  "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/architect-to-implementer",
+  "license": "MIT",
+  "keywords": ["handoff", "implementation-plan", "architecture", "codex", "cursor", "multi-agent", "spec"]
+}

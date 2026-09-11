@@ -26,6 +26,14 @@
       "category": "productivity",
       "keywords": ["agentic-os", "multi-agent", "scaffolding", "company", "bootstrap"],
       "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/agentic-os"
+    },
+    {
+      "name": "architect-to-implementer",
+      "source": "./architect-to-implementer",
+      "description": "Turn approved architecture and planning into a self-contained implementation contract for a separate coding agent (Claude Code, Codex, Cursor): repository-grounded scope, decision boundaries, acceptance criteria, verification, escalation, a validator, a docs commit-and-push, and a paste-ready kickoff prompt.",
+      "category": "development",
+      "keywords": ["handoff", "implementation-plan", "architecture", "codex", "cursor", "multi-agent", "spec"],
+      "homepage": "https://github.com/polrai-bg/polr-ai-skills/tree/main/plugins/architect-to-implementer"
     }
   ]
 }

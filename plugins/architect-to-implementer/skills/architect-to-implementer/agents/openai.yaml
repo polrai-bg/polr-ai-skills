@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architect to Implementer"
+  short_description: "Create durable implementation contracts"
+  default_prompt: "Use $architect-to-implementer to create a repository-grounded implementation contract for the next coding agent."
